@@ -28,13 +28,13 @@ class Result
         int arLength = ar.Count;                                            // Determine length of ar
         Console.WriteLine(arLength);                                        // tell me length of ar
         for (int i=0; i < arLength; i++){                                   // iterates over length of ar
-            string fatInt = ar[i];                                          
-            BigInteger BabyFatInt = BigInteger.Parse(fatInt);
-            fatDollars.Add(BabyFatInt); // put babyFatInt into fatDollars
-            BigInteger FatBabies = fatDollars.Aggregate(BigInteger.Add);
+            string fatInt = ar[i];                                          // store string as fatInt
+            BigInteger BabyFatInt = BigInteger.Parse(fatInt);               // convert strings to BigIntegers
+            fatDollars.Add(BabyFatInt);                                     // put babyFatInt into fatDollars
+            BigInteger fatBabies = fatDollars.Aggregate(BigInteger.Add);    // Add all babyFatInts in fatDollars and name sum fatBabies
         }
-        return FatBabies;
-        Console.WriteLine(FatBabies);
+        return fatBabies;                                                   // send fatBabies to Solution
+        Console.WriteLine(fatBabies);                                       // Show me fatBabies
     }
 
 }
